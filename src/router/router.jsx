@@ -10,6 +10,8 @@ import Technology from '../page/technology/Technology'
 import Contact from '../page/contact/Contact'
 import PageNotFound from '../page/pageNotFound/PageNotFound'
 import Layout from '../layout/Layout'
+import SingleProduct from '@/page/singleProduct/SingleProduct'
+import ProductCategory from '@/page/productCategory/ProductCategory'
 
 const router = createBrowserRouter([
    {
@@ -44,6 +46,14 @@ const router = createBrowserRouter([
               path:"/contact-us",
               element:<Contact/>
           }
+          ,{
+            path:"/product/:id",
+            element:<SingleProduct/>
+           }
+          ,{
+            path:"/category/:id",
+            element:<ProductCategory/>
+           }
           ,{
               path:"*",
               element:<PageNotFound/>
